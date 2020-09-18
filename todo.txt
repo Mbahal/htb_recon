@@ -1,0 +1,4 @@
+check if https://github.com/Tib3rius/AutoRecon is worth to add
+add cewl to create a custom wordlist
+add wfuzz line to fuzz for subdomains
+add wfuzz line to fuzz for hidden repo if 403/401 is detected (admirer box style)
