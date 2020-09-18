@@ -8,10 +8,7 @@ usage() { echo "Usage: $0 [-ip <ipaddress>] [-namebox <name_of_the_box>]" 1>&2; 
 while getopts ":i:n:" option; do
     case "${option}" in
         i)
-            ip=`echo ${OPTARG} | tr -d '\n'`
-	    echo $ip
-	    REGEX_IP="^(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
-	    echo `[[ $ip =~ $REGEX_IP ]]` 
+            ip=${OPTARG}
             ;;
         n)
             namebox=${OPTARG}
@@ -31,6 +28,6 @@ echo "ip = ${ip}"
 echo "namebox = ${namebox}"
 
 #nmap -Pn -A -T4 -p- -sC -sV "$ip" -o nmap_result
+#sudo echo "$ip	$namebox" >> test.txt 
 
-sudo echo "$ip	$namebox" >> test.txt 
 
